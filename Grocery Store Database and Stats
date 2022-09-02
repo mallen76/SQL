@@ -1,0 +1,36 @@
+--create a grocery store data base. I chose to do a steak section.
+
+CREATE TABLE Steaks (id INTEGER PRIMARY KEY, item_type TEXT, weight INTEGER, quantity INTEGER, price INTEGER );
+
+INSERT INTO Steaks VALUES (1, "RIBEYES", 16 ,3,23 );
+INSERT INTO Steaks VALUES (2, "FILETS", 12, 5, 50);
+INSERT INTO Steaks VALUES (3, "SIRLOINS", 11, 7, 13);
+INSERT INTO Steaks VALUES (4, "BONE-IN", 20, 5, 21);
+INSERT INTO Steaks VALUES (5, "PORTERHOUSE", 23, 10, 40);
+INSERT INTO Steaks VALUES (6, "TOMAHAWK", 20, 21, 35);
+INSERT INTO Steaks VALUES (7, "NYS TRAD",  12, 4, 19);
+INSERT INTO Steaks VALUES (8, "NYS THICK", 8, 9, 16);
+INSERT INTO Steaks VALUES (9, "PRIME RIB",  14, 2, 28);
+INSERT INTO Steaks VALUES (10, "BRISKET",  5, 3, 15);
+INSERT INTO Steaks VALUES (11, "FLAT IRON",  6, 12, 25);
+INSERT INTO Steaks VALUES (12, "SKIRT",  9, 5, 14);
+INSERT INTO Steaks VALUES (13, "RUMP", 16, 7, 10);
+INSERT INTO Steaks VALUES (14, "FLAP", 12, 2, 17);
+INSERT INTO Steaks VALUES (15, "LONDON BROIL", 10, 8, 20);
+
+--display database ordered by price
+
+SELECT * FROM Steaks ORDER BY price desc; 
+
+--display how many steaks there is
+
+SELECT SUM(QUANTITY) FROM STEAKS;
+
+--display Steaks that are less than 50 dollars
+
+SELECT * FROM Steaks WHERE price < 50 ORDER BY price desc;
+
+--display average price of steaks
+
+SELECT AVG(price) "avg steak price"
+FROM Steaks
