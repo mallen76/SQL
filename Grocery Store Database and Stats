@@ -1,4 +1,4 @@
---create a grocery store data base. I chose to do a steak section.
+--create a grocery store database. I chose to do a steak section.
 
 CREATE TABLE Steaks (id INTEGER PRIMARY KEY, item_type TEXT, weight INTEGER, quantity INTEGER, price INTEGER );
 
